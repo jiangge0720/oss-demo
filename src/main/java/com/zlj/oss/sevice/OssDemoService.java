@@ -7,7 +7,6 @@ import com.aliyun.oss.model.BucketInfo;
 import com.aliyun.oss.model.ListObjectsRequest;
 import com.aliyun.oss.model.OSSObjectSummary;
 import com.aliyun.oss.model.ObjectListing;
-import com.zlj.oss.config.OssProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -31,32 +30,32 @@ import java.util.List;
  * 2019/12/1517:42
  */
 @Service
-@EnableConfigurationProperties(OssProperties.class)
+//@EnableConfigurationProperties(OssProperties.class)
 public class OssDemoService {
 
-    @Autowired
-    private OssProperties prop;
-
-//    //访问oss的域名，根据自己账号上的值
-//    private static String endpoint = "http://oss-cn-hangzhou.aliyuncs.com/";
-//
-//    // accessKeyId和accessKeySecret是OSS的访问密钥，可以在控制台上创建和查看，
-//    private static String accessKeyId = "LTAI4FtbZtEBECHtReapWg2k";
-//    private static String accessKeySecret = "lPUXYm7Yh7hHtPGMCqZ9ez6f0pwNrF";
-//
-//    // Bucket用来管理所存储Object的存储空间
-//    private static String bucketName = "zlj-bucket";
+   // @Autowired
+   // private OssProperties prop;
 
     //访问oss的域名，根据自己账号上的值
-    String endpoint = prop.getEndpoint();
+    private static String endpoint = "http://oss-cn-hangzhou.aliyuncs.com/";
 
     // accessKeyId和accessKeySecret是OSS的访问密钥，可以在控制台上创建和查看，
-    String accessKeyId = prop.getAccessKeyId();
-    String accessKeySecret = prop.getAccessKeySecret();
+    private static String accessKeyId = "z";
+    private static String accessKeySecret = "z";
 
     // Bucket用来管理所存储Object的存储空间
-    String bucketName = prop.getBucketName();
-    //允许上传的文件类型
+    private static String bucketName = "zlj-bucket";
+
+//    //访问oss的域名，根据自己账号上的值
+//    String endpoint = prop.getEndpoint();
+//
+//    // accessKeyId和accessKeySecret是OSS的访问密钥，可以在控制台上创建和查看，
+//    String accessKeyId = prop.getAccessKeyId();
+//    String accessKeySecret = prop.getAccessKeySecret();
+//
+//    // Bucket用来管理所存储Object的存储空间
+//    String bucketName = prop.getBucketName();
+//    //允许上传的文件类型
     private static final List<String> ALLOW_TYPES = Arrays.asList("image/jpeg", "image/png");
 
 

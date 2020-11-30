@@ -1,6 +1,6 @@
 zlj:
    oss:
      endpoint: http://oss-cn-hangzhou.aliyuncs.com/ #访问oss的域名
-     accessKeyId: LTAI4FtbZtEBECHtReapWg2k #自己的accessKeyId
-     accessKeySecret: lPUXYm7Yh7hHtPGMCqZ9ez6f0pwNrF #自己的accessKeySecret
+     accessKeyId: z#自己的accessKeyId
+     accessKeySecret:  z#自己的accessKeySecret
      bucketName: zlj-bucket  #自己的bucket
